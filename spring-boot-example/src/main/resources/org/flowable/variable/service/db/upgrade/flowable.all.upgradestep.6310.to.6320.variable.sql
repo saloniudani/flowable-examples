@@ -1,0 +1,1 @@
+upsert into ACT_GE_PROPERTY values ('variable.schema.version', '6.3.2.0', 1);
