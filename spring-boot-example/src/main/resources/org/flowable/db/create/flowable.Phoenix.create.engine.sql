@@ -1,4 +1,4 @@
-create table ACT_RE_DEPLOYMENT (
+create table if not exists ACT_RE_DEPLOYMENT (
     ID_ varchar(64) not null primary key,
     NAME_ varchar(255),
     CATEGORY_ varchar(255),
@@ -11,7 +11,7 @@ create table ACT_RE_DEPLOYMENT (
     ENGINE_VERSION_ varchar(255)
 );
 
-create table ACT_RE_MODEL (
+create table if not exists ACT_RE_MODEL (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     NAME_ varchar(255),
@@ -27,7 +27,7 @@ create table ACT_RE_MODEL (
     TENANT_ID_ varchar(255)
 );
 
-create table ACT_RU_EXECUTION (
+create table if not exists ACT_RU_EXECUTION (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     PROC_INST_ID_ varchar(64),
@@ -63,7 +63,7 @@ create table ACT_RU_EXECUTION (
     CALLBACK_TYPE_ varchar(255)
 );
 
-create table ACT_RE_PROCDEF (
+create table if not exists ACT_RE_PROCDEF (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     CATEGORY_ varchar(255),
@@ -84,7 +84,7 @@ create table ACT_RE_PROCDEF (
     ENGINE_VERSION_ varchar(255)
 );
 
-create table ACT_RU_EVENT_SUBSCR (
+create table if not exists ACT_RU_EVENT_SUBSCR (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     EVENT_TYPE_ varchar(255),
@@ -98,8 +98,8 @@ create table ACT_RU_EVENT_SUBSCR (
     TENANT_ID_ varchar(255)
 );
 
-create table ACT_EVT_LOG (
-    LOG_NR_ bigint not null GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) primary key,
+create table if not exists ACT_EVT_LOG (
+    LOG_NR_ bigint not null primary key,
     TYPE_ varchar(64),
     PROC_DEF_ID_ varchar(64),
     PROC_INST_ID_ varchar(64),
@@ -114,7 +114,7 @@ create table ACT_EVT_LOG (
     primary key (LOG_NR_)
 );
 
-create table ACT_PROCDEF_INFO (
+create table if not exists ACT_PROCDEF_INFO (
 	ID_ varchar(64) not null primary key,
     PROC_DEF_ID_ varchar(64),
     REV_ integer,

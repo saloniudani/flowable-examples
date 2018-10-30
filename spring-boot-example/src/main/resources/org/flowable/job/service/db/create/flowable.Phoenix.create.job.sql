@@ -1,4 +1,4 @@
-create table ACT_RU_JOB (
+create table if not exists ACT_RU_JOB (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     TYPE_ varchar(255),
@@ -17,14 +17,13 @@ create table ACT_RU_JOB (
     EXCEPTION_MSG_ varchar(4000),
     DUEDATE_ timestamp,
     REPEAT_ varchar(255),
-     varchar(255),
     HANDLER_CFG_ varchar(4000),
     CUSTOM_VALUES_ID_ varchar(64),
     CREATE_TIME_ timestamp,
     TENANT_ID_ varchar(255)
 );
 
-create table ACT_RU_TIMER_JOB (
+create table if not exists ACT_RU_TIMER_JOB (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     TYPE_ varchar(255),
@@ -50,7 +49,7 @@ create table ACT_RU_TIMER_JOB (
     TENANT_ID_ varchar(255)
 );
 
-create table ACT_RU_SUSPENDED_JOB (
+create table if not exists ACT_RU_SUSPENDED_JOB (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     TYPE_ varchar(255),
@@ -74,7 +73,7 @@ create table ACT_RU_SUSPENDED_JOB (
     TENANT_ID_ varchar(255)
 );
 
-create table ACT_RU_DEADLETTER_JOB (
+create table if not exists ACT_RU_DEADLETTER_JOB (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     TYPE_ varchar(255),
@@ -97,7 +96,7 @@ create table ACT_RU_DEADLETTER_JOB (
     TENANT_ID_ varchar(255)
 );
 
-create table ACT_RU_HISTORY_JOB (
+create table if not exists ACT_RU_HISTORY_JOB (
     ID_ varchar(64) NOT NULL primary key,
     REV_ integer,
     LOCK_EXP_TIME_ timestamp,

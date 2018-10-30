@@ -1,4 +1,4 @@
-create table ACT_RU_VARIABLE (
+create table if not exists ACT_RU_VARIABLE (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     TYPE_ varchar(255),

@@ -1,4 +1,4 @@
-create table ACT_RU_IDENTITYLINK (
+create table if not exists ACT_RU_IDENTITYLINK (
     ID_ varchar(64) not null primary key ,
     REV_ integer,
     GROUP_ID_ varchar(255),

@@ -1,4 +1,4 @@
-create table ACT_HI_TASKINST (
+create table if not exists ACT_HI_TASKINST (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     PROC_DEF_ID_ varchar(64),
@@ -15,7 +15,7 @@ create table ACT_HI_TASKINST (
     DESCRIPTION_ varchar(4000),
     OWNER_ varchar(255),
     ASSIGNEE_ varchar(255),
-    START_TIME_ timestamp not null,
+    START_TIME_ timestamp,
     CLAIM_TIME_ timestamp,
     END_TIME_ timestamp,
     DURATION_ bigint,

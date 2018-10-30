@@ -1,4 +1,4 @@
-create table ACT_RU_TASK (
+create table if not exists ACT_RU_TASK (
     ID_ varchar(64) not null primary key,
     REV_ integer,
     EXECUTION_ID_ varchar(64),

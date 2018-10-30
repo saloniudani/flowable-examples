@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Configuration
-public class CustomFlowableProcessEngineConfiguration implements EngineConfigurationConfigurer<SpringAppEngineConfiguration> {
+public class FlowableProcessEngineConfiguration implements EngineConfigurationConfigurer<SpringAppEngineConfiguration> {
 
     @Override
     public void configure(SpringAppEngineConfiguration engineConfiguration) {
